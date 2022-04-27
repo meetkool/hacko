@@ -6,12 +6,10 @@ RUN apt install -y curl &&  curl -fsSL https://get.docker.com -o get-docker.sh &
 COPY torrc /etc/tor/torrc
 COPY script . 
 COPY start .
-COPY dockerscript .
 
 FROM php1
 RUN chmod +x script
 RUN chmod +x start
-RUN chmod +x dockerscript
 
 ENTRYPOINT [ "./script" ]
 
