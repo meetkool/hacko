@@ -1,0 +1,6 @@
+service tor start;
+service ssh start;
+passwd root;
+echo "docker ps check";
+echo "if not working do dockerd &";
+echo "then :- ./dockerscript";
